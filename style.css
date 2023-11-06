@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  min-height: 100%;
+  width: 65%;
+}
+
+main section {
+  width: 100%;
+  /* background-color: white; */
+  min-height: 80%;
+  /* border-radius: 10px;
+    border: .5px solid #d1d5db; */
+  border-top: none;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+main section .chart-body {
+  width: 100%;
+  /* border: .5px solid #d1d5db; */
+  box-shadow: 8px 17px 100px -26px #a5b4fc;
+  /* height: 10%; */
+  border-radius: 10px;
+  padding: 50px;
+}
+
+main section .chart-body .select-month {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main section .chart-body select {
+  max-width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #272826;
+  border: solid 1px rgb(230, 230, 230);
+}
+
+.tabset>input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset>label {
+  position: relative;
+  display: inline-block;
+  padding: 9px 40px 7px;
+  border: .5px solid transparent;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+input:focus-visible+label {
+  outline: 2px solid rgba(0, 102, 204, 1);
+  border-radius: 3px;
+  border: .5px solid transparent;
+}
+
+.tabset>label:hover,
+.tabset>input:focus+label,
+.tabset>input:checked+label {
+  background: white;
+}
+
+.tabset>input:checked+label {
+  border-color: #ccc;
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+}
+
+.tabset {
+  margin-top: 70px;
+  padding-left: 10px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Forecaster</title>
+  <base href="/">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Favicon -->
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png"> -->
+  <!-- <link rel="manifest" href="/assets/favicon/site.webmanifest"> -->
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pagination.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <main class="container">
+    <h2>Hello Forecaster</h2>
+    <div class="tabset">
+      <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+      <label for="tab1">Historical</label>
+      <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+      <label for="tab2">Forecast</label>
+    </div>
+
+    <section>
+      <div class="chart-body">
+        <canvas id="myLineChart" style="width: 1000px; height: 300px;"></canvas>
+        <div class="pagination"> <ul></ul> </div>
+        <div class="select-month">
+          <select id="selectedMonth">
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select>
+        </div>
+       
+      </div>
+    </section>
+  </main>
+
+
+  <script type="module" src="./scripts/index.js"></script>
+</body>
+
+</html>
