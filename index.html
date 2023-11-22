@@ -28,33 +28,47 @@
   <main class="container">
     <h2>Hello Forecaster</h2>
     <div class="tabset">
-      <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
-      <label for="tab1">Historical</label>
-      <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
-      <label for="tab2">Forecast</label>
+      <input type="radio" name="tabset" id="historical" aria-controls="marzen" checked>
+      <label for="historical">Historical</label>
+      <input type="radio" name="tabset" id="forcast" aria-controls="rauchbier">
+      <label for="forcast">Forecast</label>
     </div>
+
+    <!-- <h2 class="mode selected" id="historical">Historical</h2>
+    <h2 class="mode" id="forcast">Forcast</h2> -->
 
     <section>
       <div class="chart-body">
-        <canvas id="myLineChart" style="width: 1000px; height: 300px;"></canvas>
-        <div class="pagination"> <ul></ul> </div>
-        <div class="select-month">
-          <select id="selectedMonth">
-            <option value="January">January</option>
-            <option value="February">February</option>
-            <option value="March">March</option>
-            <option value="April">April</option>
-            <option value="May">May</option>
-            <option value="June">June</option>
-            <option value="July">July</option>
-            <option value="August">August</option>
-            <option value="September">September</option>
-            <option value="October">October</option>
-            <option value="November">November</option>
-            <option value="December">December</option>
-        </select>
+        <div class="chart-section">
+          <p id="noData">
+            <span>No data available for this date/filter.</span>
+          </p>
+          <!-- <canvas id="myLineChart" style="width: 1000px; height: 300px;"></canvas> -->
+          <canvas id="myLineChart" style="width: 1000px; height: 300px;"></canvas>
         </div>
-       
+        <p class="errorMessage" id="errorMessage"></p>
+
+        <div class="filter" id="filter">
+          <div class="pagination">
+            <ul></ul>
+          </div>
+          <div class="select-month">
+            <select id="selectedMonth">
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select>
+          </div>
+        </div>
       </div>
     </section>
   </main>
