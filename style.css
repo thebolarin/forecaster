@@ -21,10 +21,7 @@ main {
 
 main section {
   width: 100%;
-  /* background-color: white; */
   min-height: 80%;
-  /* border-radius: 10px;
-    border: .5px solid #d1d5db; */
   border-top: none;
   display: flex;
   justify-content: center;

@@ -15,27 +15,36 @@
     rel="stylesheet">
 
   <!-- Favicon -->
-  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png"> -->
-  <!-- <link rel="manifest" href="/assets/favicon/site.webmanifest"> -->
-
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="pagination.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/scripts/service-worker.js')
+        .then(registration => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(error => {
+          console.error('Service Worker registration failed:', error);
+        });
+    }
+  </script>
 </head>
 
 <body>
   <main class="container">
     <h2>Hello Forecaster</h2>
     <div class="tabset">
-      <input type="radio" name="tabset" id="historical" aria-controls="marzen" checked>
+      <input type="radio" name="tabset" id="historical" aria-controls="historical" checked>
       <label for="historical">Historical</label>
-      <input type="radio" name="tabset" id="forcast" aria-controls="rauchbier">
+      <input type="radio" name="tabset" id="forcast" aria-controls="forcast">
       <label for="forcast">Forecast</label>
     </div>
-
-    <!-- <h2 class="mode selected" id="historical">Historical</h2>
-    <h2 class="mode" id="forcast">Forcast</h2> -->
 
     <section>
       <div class="chart-body">
@@ -43,7 +52,6 @@
           <p id="noData">
             <span>No data available for this date/filter.</span>
           </p>
-          <!-- <canvas id="myLineChart" style="width: 1000px; height: 300px;"></canvas> -->
           <canvas id="myLineChart" style="width: 1000px; height: 300px;"></canvas>
         </div>
         <p class="errorMessage" id="errorMessage"></p>
